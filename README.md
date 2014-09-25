@@ -16,7 +16,7 @@ Bundle Installation
 Oldfashioned
 ------------
 
-Put the files into the appropriate directories. Not testes yet.
+Put the files into the appropriate directories. Not tested yet.
 
 Your Experiance
 ---------------
@@ -30,7 +30,7 @@ What makes it unique?
 Comparism to other vim syntax highlighting for TypoScript:
 
  * **Others**: Exessive use of *keywords* to detect the higlighted items.
- * **This**: *Syntax analyses* by regular experessions to detec the items.
+ * **This**: *Syntax analyses* by use regular experessions to detect the items.
 
 Future improvement: Merge best of both worlds.
 
