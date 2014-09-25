@@ -29,10 +29,10 @@ What makes it unique?
 
 Comparism to other vim syntax highlighting for TypoScript:
 
- * Others: Exessive use of Keywords to detect the higlighted items.
- * This: Syntax analyses by regular experessions to detec the items.
+ * *Others*: Exessive use of *keywords* to detect the higlighted items.
+ * *This*: *Syntax analyses* by regular experessions to detec the items.
 
- Future improvement: Merge best of both worlds.
+Future improvement: Merge best of both worlds.
 
 Motivation
 ==========
