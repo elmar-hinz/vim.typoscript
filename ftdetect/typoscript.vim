@@ -1,4 +1,5 @@
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typoscript
+autocmd BufNewFile,BufRead *.ts2 setlocal filetype=typoscript
 autocmd BufNewFile,BufRead */ext_typoscript_setup.txt setlocal filetype=typoscript
 autocmd BufNewFile,BufRead */ext_typoscript_constants.txt setlocal filetype=typoscript
 autocmd BufNewFile,BufRead */Typoscript/setup.txt setlocal filetype=typoscript
