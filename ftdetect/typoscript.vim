@@ -6,3 +6,5 @@ autocmd BufNewFile,BufRead */Typoscript/setup.txt setlocal filetype=typoscript
 autocmd BufNewFile,BufRead */Typoscript/constants.txt setlocal filetype=typoscript
 autocmd BufNewFile,BufRead */static/setup.txt setlocal filetype=typoscript
 autocmd BufNewFile,BufRead */static/constants.txt setlocal filetype=typoscript
+autocmd BufNewFile,BufRead */Static/setup.txt setlocal filetype=typoscript
+autocmd BufNewFile,BufRead */Static/constants.txt setlocal filetype=typoscript
