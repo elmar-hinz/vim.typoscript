@@ -6,7 +6,7 @@ endif
 setlocal isident=@,48-57,-,.,_,192-255
 
 " Top level elements
-syntax region tsComment keepend start="\/\*" end="\*\/" 
+syntax region tsComment keepend start="^\s*\/\*" end="^\s*\*\/.*$"
 syntax region tsComment keepend start="^\s*#" end="$" 
 syntax region tsComment keepend start="\v^\s*\/\/" end="$" 
 syntax region tsInclude keepend start="\v^\s*\<" end="\v\>\s*$"
