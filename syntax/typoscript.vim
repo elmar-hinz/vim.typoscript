@@ -7,11 +7,11 @@ setlocal isident=@,48-57,-,.,_,192-255
 
 " Top level elements
 syntax region tsComment keepend start="^\s*\/\*" end="^\s*\*\/.*$"
-syntax region tsComment keepend start="^\s*#" end="$" 
-syntax region tsComment keepend start="\v^\s*\/\/" end="$" 
+syntax region tsComment keepend start="^\s*#" end="$"
+syntax region tsComment keepend start="\v^\s*\/\/" end="$"
 syntax region tsInclude keepend start="\v^\s*\<" end="\v\>\s*$"
 syntax region tsCondition keepend start="\v^\s*\[" end="\]\s*$"
-syntax match tsSingleline "\v^\s*\i+\s*[=<>{].*$" 
+syntax match tsSingleline "\v^\s*\i+\s*[=<>{].*$"
 syntax region tsMultiline keepend start="\v^\s*\i+\s*\(\s*$"  end="\v^\s*\)\s*$"
 syntax match tsDelimiter "\v^\s*\}\s*$"
 
@@ -41,8 +41,30 @@ syntax match tsTagOperator "\v\=" contained containedin=tsTag
 syntax region tsTagAttrValue matchgroup=tsDelimiter start="\v\"" end="\v\"" contained containedin=tsTag
 
 " Keywords
-syntax case ignore | syntax keyword tsTodo contained containedin=tsComment todo xxx 
-syntax case match | syntax keyword tsObjectType PAGE CONTENT COA COA_INT HTML TEXT USER USER_INT LOAD_REGISTER RESTORE_REGISTER IMAGE CASE contained containedin=tsValue
+syntax case ignore | syntax keyword tsTodo contained containedin=tsComment TODO
+syntax case ignore | syntax keyword tsTodo contained containedin=tsComment xxx
+syntax case match | syntax keyword tsObjectType contained containedin=tsValue CASE
+syntax case match | syntax keyword tsObjectType contained containedin=tsValue COA
+syntax case match | syntax keyword tsObjectType contained containedin=tsValue COA_INT
+syntax case match | syntax keyword tsObjectType contained containedin=tsValue CONTENT
+syntax case match | syntax keyword tsObjectType contained containedin=tsValue EDITPANEL
+syntax case match | syntax keyword tsObjectType contained containedin=tsValue FILE
+syntax case match | syntax keyword tsObjectType contained containedin=tsValue FILES
+syntax case match | syntax keyword tsObjectType contained containedin=tsValue FLUIDTEMPLATE
+syntax case match | syntax keyword tsObjectType contained containedin=tsValue FORM
+syntax case match | syntax keyword tsObjectType contained containedin=tsValue HMENU
+syntax case match | syntax keyword tsObjectType contained containedin=tsValue HTML
+syntax case match | syntax keyword tsObjectType contained containedin=tsValue IMAGE
+syntax case match | syntax keyword tsObjectType contained containedin=tsValue IMG_RESOURCE
+syntax case match | syntax keyword tsObjectType contained containedin=tsValue LOAD_REGISTER
+syntax case match | syntax keyword tsObjectType contained containedin=tsValue PAGE
+syntax case match | syntax keyword tsObjectType contained containedin=tsValue RECORDS
+syntax case match | syntax keyword tsObjectType contained containedin=tsValue RESTORE_REGISTER
+syntax case match | syntax keyword tsObjectType contained containedin=tsValue SVG
+syntax case match | syntax keyword tsObjectType contained containedin=tsValue TEMPLATE
+syntax case match | syntax keyword tsObjectType contained containedin=tsValue TEXT
+syntax case match | syntax keyword tsObjectType contained containedin=tsValue USER
+syntax case match | syntax keyword tsObjectType contained containedin=tsValue USER_INT
 
 " Link groups
 highlight link tsComment Comment
