@@ -18,21 +18,15 @@ Oldfashioned
 
 Put the files into the appropriate directories. Not tested yet.
 
-Your Experiance
----------------
-
-Please report, if you sucessfully used one of the untested installation methodes.
-Even better, clone the repo, update this file, add others as needed, send a pull request.
-
 What makes it unique?
 =====================
 
 Comparism to other vim syntax highlighting for TypoScript:
 
  * **Others**: Exessive use of *keywords* to detect the higlighted items.
- * **This**: *Syntax analyses* by use regular experessions to detect the items.
+ * **This**: *Syntax* and *grammar* analyses to detect the items.
 
-Future improvement: Merge best of both worlds.
+Future improvement: Merge best of both.
 
 Motivation
 ==========
@@ -43,4 +37,13 @@ License
 =======
 
 MIT License. See the LICENSE file.
+
+Contributors
+============
+
+* Felix Althaus (https://github.com/cumuru)
+* Frederik Vosberg (https://github.com/fvosberg)
+* Sascha Marcel Schmidt (https://github.com/torvitas)
+
+Thank you for contributions.
 
