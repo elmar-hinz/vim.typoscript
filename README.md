@@ -44,6 +44,7 @@ Contributors
 * Felix Althaus (https://github.com/cumuru)
 * Frederik Vosberg (https://github.com/fvosberg)
 * Sascha Marcel Schmidt (https://github.com/torvitas)
+* Daniel Siepmann (https://github.com/DanielSiepmann)
 
 Thank you for contributions.
 
