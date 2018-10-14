@@ -66,6 +66,15 @@ syntax case match | syntax keyword tsObjectType contained containedin=tsValue TE
 syntax case match | syntax keyword tsObjectType contained containedin=tsValue USER
 syntax case match | syntax keyword tsObjectType contained containedin=tsValue USER_INT
 
+syntax case match | syntax keyword modificationFunction contained containedin=tsValue addToList
+syntax case match | syntax keyword modificationFunction contained containedin=tsValue prependString
+syntax case match | syntax keyword modificationFunction contained containedin=tsValue removeFromList
+syntax case match | syntax keyword modificationFunction contained containedin=tsValue removeString
+syntax case match | syntax keyword modificationFunction contained containedin=tsValue replaceString
+syntax case match | syntax keyword modificationFunction contained containedin=tsValue reverseList
+syntax case match | syntax keyword modificationFunction contained containedin=tsValue sortList
+syntax case match | syntax keyword modificationFunction contained containedin=tsValue uniqueList
+
 " Link groups
 highlight link tsComment Comment
 highlight link tsCondition Conditional
@@ -81,6 +90,7 @@ highlight link tsTag Identifier
 highlight link tsTagOperator Operator
 highlight link tsTagAttrValue String
 highlight link tsObjectType Type
+highlight link modificationFunction Type
 
 let b:current_syntax = "typoscript"
 
