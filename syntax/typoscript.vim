@@ -11,7 +11,7 @@ syntax region tsComment keepend start="^\s*#" end="$"
 syntax region tsComment keepend start="\v^\s*\/\/" end="$"
 syntax region tsInclude keepend start="\v^\s*\<" end="\v\>\s*$"
 syntax region tsCondition keepend start="\v^\s*\[" end="\]\s*$"
-syntax match tsSingleline "\v^\s*\i+\s*[=<>{].*$"
+syntax match tsSingleline "\v^\s*\i+\s*[=:<>{].*$"
 syntax region tsMultiline keepend start="\v^\s*\i+\s*\(\s*$"  end="\v^\s*\)\s*$"
 syntax match tsDelimiter "\v^\s*\}\s*$"
 
@@ -20,9 +20,10 @@ syntax region tsValue keepend matchgroup=tsLineOperator start="\v\=" end="\v$" c
 syntax region tsValue keepend matchgroup=tsDelimiter start="\v\(" end="\v^\s*\)\s*$" contained containedin=tsMultiline
 syntax match tsIdentifier "\v^\s*\i+" contained containedin=tsSingleline,tsMultiline
 syntax match tsLineOperator "\v[=<]" contained containedin=tsSymlink
-syntax match tsSymlink "\v(\<|\=\s*\<)\s*\i+\s*$" contained containedin=tsSingleline
+syntax match tsSymlink "\v(\<|\=\s*\<|\>\s*)\s*\i+\s*$" contained containedin=tsSingleline
 syntax match tsDelimiter "\v\{\s*$" contained containedin=tsSingleline
-syntax match tsLineOperator "\v\>\s*$" contained containedin=tsSingleline
+syntax match tsLineOperator "\v:\=" contained containedin=tsSingleline
+syntax match tsLineOperator "\v\>" contained containedin=tsSingleline
 syntax match tsIdentifier "\v\i+\s*$" contained containedin=tsSymlink
 
 " Sub level elements
@@ -66,6 +67,15 @@ syntax case match | syntax keyword tsObjectType contained containedin=tsValue TE
 syntax case match | syntax keyword tsObjectType contained containedin=tsValue USER
 syntax case match | syntax keyword tsObjectType contained containedin=tsValue USER_INT
 
+syntax case match | syntax keyword modificationFunction contained containedin=tsValue addToList
+syntax case match | syntax keyword modificationFunction contained containedin=tsValue prependString
+syntax case match | syntax keyword modificationFunction contained containedin=tsValue removeFromList
+syntax case match | syntax keyword modificationFunction contained containedin=tsValue removeString
+syntax case match | syntax keyword modificationFunction contained containedin=tsValue replaceString
+syntax case match | syntax keyword modificationFunction contained containedin=tsValue reverseList
+syntax case match | syntax keyword modificationFunction contained containedin=tsValue sortList
+syntax case match | syntax keyword modificationFunction contained containedin=tsValue uniqueList
+
 " Link groups
 highlight link tsComment Comment
 highlight link tsCondition Conditional
@@ -81,6 +91,7 @@ highlight link tsTag Identifier
 highlight link tsTagOperator Operator
 highlight link tsTagAttrValue String
 highlight link tsObjectType Type
+highlight link modificationFunction Type
 
 let b:current_syntax = "typoscript"
 

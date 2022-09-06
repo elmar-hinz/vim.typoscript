@@ -1,5 +1,3 @@
-autocmd BufNewFile,BufRead *.ts setlocal filetype=typoscript
-autocmd BufNewFile,BufRead *.ts2 setlocal filetype=typoscript
 autocmd BufNewFile,BufRead *.typoscript setlocal filetype=typoscript
 autocmd BufNewFile,BufRead *.tsconfig setlocal filetype=typoscript
 
